@@ -1,0 +1,84 @@
+
+
+
+/*===========================
+    09.BLOG css 
+===========================*/
+
+
+.single_blog{
+    & .blog_image{
+        & img{
+            width: 100%;
+        }
+    }
+    & .blog_content{
+        margin-top: 25px;
+        
+        & .blog_title{
+            & a{
+                font-size: 24px;
+                font-weight: 600;
+                color: $heading-color;
+                @include transition(0.3s);
+                
+                @media #{$xs}{
+                    font-size: 20px;
+                }
+                
+                &:hover{
+                    color: $theme-color;
+                }
+            }
+        }
+        & p{
+            margin-top: 15px;
+        }
+        
+        & .more{
+            font-size: 16px;
+            font-weight: 500;
+            color: $body-color;
+            margin-top: 15px;
+            @include transition(.3s);
+
+            &:hover {
+                color: $theme-color;
+            }
+        }
+    }
+    
+    &.blog_2{
+        & .blog_content{
+            margin-top: 0;
+            padding-left: 20px;
+
+            @media #{$xs}{
+                padding-left: 0;
+                padding-top: 20px;
+            }
+            @media #{$sm}{
+                padding-left: 20px;
+                padding-top: 0;
+            }
+            
+            & .blog_title{
+                & a{
+                    font-size: 20px;
+                }
+            }
+            & p{
+                margin-top: 15px;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+

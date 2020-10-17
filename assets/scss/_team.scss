@@ -1,0 +1,74 @@
+
+
+
+/*===========================
+        07.TEAM css 
+===========================*/
+
+
+.single_team{
+    position: relative;
+    
+    & img{
+        width: 100%;
+    }
+    & .team_content{
+        position: absolute;
+        background-color: $white;
+        left: 0;
+        bottom: 0;
+        width: 85%;
+        padding: 25px;
+        padding-right: 60px;
+        
+        & .team_name{
+            & a{
+                font-size: 20px;
+                font-weight: 500;
+                color: $heading-color;
+                @include transition(0.3s);
+
+                &:hover {
+                    color: $theme-color;
+                }
+            }
+        }
+        & p{
+            margin-top: 5px;
+        }
+        & .social{
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            @include transform(translateY(-50%));
+            
+            & li{
+                margin: 3px 0;
+                
+                & a{
+                    color: $body-color;
+                    font-size: 16px;
+                    @include transition(.3s);
+
+                    &:hover {
+                        color: $theme-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,89 @@
+
+
+
+/*===========================
+      06.PRICING css 
+===========================*/
+
+.pricing_area{
+    background-color: $gray;
+}
+
+.single_pricing{
+    background-color: $white;
+    padding: 60px 50px;
+    
+    @media #{$xs}{
+        padding: 40px 30px;
+    }
+    
+    & .pricing_title{
+        font-size: 24px;
+        font-weight: 600;
+        
+        @media #{$xs}{
+            font-size: 20px;
+        }
+    }
+    & .price{
+        color: $theme-color;
+        font-size: 44px;
+        margin-top: 25px;
+        font-weight: 700;
+        
+        @media #{$xs}{
+            font-size: 38px;
+        }
+    }
+    & .pricing_list{
+        & li{
+            margin-top: 15px;
+            font-size: 16px;
+            font-weight: 300;
+        }
+    }
+    & .mian-btn{
+        height: 45px;
+        border: 1px solid $body-color;
+        line-height: 43px;
+        text-align: center;
+        padding: 0 25px;
+        color: $theme-color;
+        @include transition(0.3s);
+        margin-top: 30px;
+        
+        &:hover{
+            background-color: rgba($body-color, 0.2);
+        }
+    }
+    
+    &.active{
+        background-color: $theme-color;
+        
+        & .pricing_title{
+            color: $white;
+        }
+        & .price{
+            color: $white;
+        }
+        & .pricing_list{
+            & li{
+                color: $white;
+            }
+        }
+        & .mian-btn{
+            background-color: $white;
+            border-color: $white;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+

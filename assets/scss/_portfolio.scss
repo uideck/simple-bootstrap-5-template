@@ -1,0 +1,134 @@
+
+
+
+/*===========================
+      05.PORTFOLIO css 
+===========================*/
+
+
+.portfolio_area{}
+
+.portfolio_wrapper{
+    
+}
+
+
+.single_portfolio{
+    position: relative;
+    width: 25%;
+    
+    @media #{$md}{
+        width: 50%;
+    }
+    @media #{$xs}{
+        width: 100%;
+    }
+    @media #{$sm}{
+        width: 50%;
+    }
+    
+    & img{
+        width: 100%;
+    }
+    
+    &::before{
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($theme-color, 0.9);
+        opacity: 0;
+        @include transition(0.3s);
+    }
+    
+    & .portfolio_content{
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        @include transform(translateY(-50%));
+        text-align: center;
+        
+        & .meta{
+            & li{
+                display: inline-block;
+                margin: 0 5px;
+                @include transition(0.3s);
+                opacity: 0;
+                
+                & a{
+                    width: 35px;
+                    height: 35px;
+                    line-height: 33px;
+                    text-align: center;
+                    font-size: 16px;
+                    color: $white;
+                    border: 1px solid $white;
+                    border-radius: 5px;
+                    @include transition(0.3s);
+                    
+                    &:hover{
+                        background-color: $white;
+                        color: $theme-color;
+                    }
+                }
+                
+                &:first-child{
+                    @include transform(translateX(-100%));
+                }
+                
+                &:last-child{
+                    @include transform(translateX(100%));
+                }
+            }
+        }
+        
+        & .portfolio_title{
+            font-size: 24px;
+            font-weight: 600;
+            color: $white;
+            margin-top: 25px;
+            @include transform(translateY(100%));
+            @include transition(0.3s);
+            opacity: 0;
+            
+            @media #{$lg}{
+                font-size: 20px;
+            }
+            @media #{$xs}{
+                font-size: 20px;
+            }
+        }
+    }
+    
+    &:hover{
+        &::before{
+            opacity: 1;
+        }
+            
+        & .portfolio_content{
+            & .meta{
+                & li{
+                    @include transform(translateX(0));
+                    @include transition-delay(0.2s);
+                    
+                    opacity: 1;
+                }
+            }
+            & .portfolio_title{
+                @include transform(translateX(0));
+                @include transition-delay(0.2s);
+                opacity: 1;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+

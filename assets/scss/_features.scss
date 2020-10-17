@@ -1,0 +1,50 @@
+
+
+
+/*===========================
+      03.FEATURES css 
+===========================*/
+
+.single_features{
+    & i{
+        font-size: 60px;
+        line-height: 60px;
+        color: $theme-color;
+        @include transition(0.3s);
+        
+        @media #{$xs}{
+            font-size: 40px;
+            line-height: 45px;
+        }
+    }
+    & .features_title{
+            color: $theme-color;
+            margin-top: 15px;
+            font-size: 24px;
+            font-weight: 600;
+            @include transition(0.3s);
+            
+            @media #{$xs}{
+                font-size: 24px;
+            }
+
+    }
+    & p{
+        margin-top: 15px;
+    }
+    
+    &:hover{
+        & i{
+            color: $theme-color;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
